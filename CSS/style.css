@@ -1,0 +1,15 @@
+
+
+.container {
+    max-width: 400px;
+    padding: 50px;
+}
+
+#header {
+    overflow: scroll;
+}
+
+#start-reset {
+    float: right;
+}
+
