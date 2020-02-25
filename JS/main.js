@@ -2,7 +2,7 @@ let char = "";
 let input = "";
 function getChar() {
     let char_list1 = "+©¶»%^*?&";
-    let rand = Math.floor(Math.random() * 10);
+    let rand = Math.floor(Math.random() * char_list1.length);
     input = char_list1.charAt(rand);
     let char_list2 = "!@#$⇿∅∇∈⊠";
     for (let i = 1; i <= 99; i++) {
