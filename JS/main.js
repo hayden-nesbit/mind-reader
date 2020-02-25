@@ -1,39 +1,34 @@
-var state = 0;
-
-
-function getRandomNum(max) {
-    max = 99;
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-
-function characters() {
-    for (i = 1; i <= 99; i++) {
-
-    }
-}
-
-
-var final = [];
+let num = [];
 for (i = 1; i <= 99; i++) {
     num.push(i);
 }
 
-//var symbol = ("@#!$%&*?+");
-//for (i = 1; i <= 99; i++) {
-   // symbol.push(i);
 
-
+// function getSymbols() {
+//     let symbols = "!@#$%^&*?"
+//     let string_length = 99;
+//     let randomSymbol = "";
+//     for (let i = 0; i <= string_length; i++) {
+//         let rsymbols = Math.floor(Math.random() * symbols.length); 
+//         randomSymbol += symbols.substring(rsymbols, rsymbols+1);
+//         return randomSymbol;
+//     } 
+// } 
+  
+let symbolArray = [];
 
 document.getElementById("header").innerHTML = "I can read your mind";
 document.getElementById("start-reset").innerHTML = "Go";
 
+let state = 0;
 
 function update() {
 
         state += 1;
 
         switch (state) {
-            case 1:
+
+           case 1:
                 document.getElementById("header").innerHTML = "Pick a number from 01-99";
                 document.getElementById("next").innerHTML = "Next"
                 document.getElementById("text").innerHTML = "When you have your number click next";
@@ -55,7 +50,7 @@ function update() {
                 break;
     
             case 4:
-                document.getElementById("header").innerHTML = num;
+                document.getElementById("header").innerHTML = symbolArray;
                 document.getElementById("next").innerHTML = "Reveal";
                 document.getElementById("text").innerHTML = "Find your new number. Note the symbol beside the number";
                 document.getElementById("start-reset").innerHTML = "Reset"
