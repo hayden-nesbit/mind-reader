@@ -1,0 +1,41 @@
+html, main {
+    background-color: rgb(167, 42, 42);
+}
+
+
+.container {
+    max-width: 400px;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    color: black;
+    height: 75vh;
+    background-color: whitesmoke;
+    
+}
+
+#start-reset {
+    float: right;
+}
+
+.top {
+    max-height: 50vh;
+    min-height: 50vh;
+    overflow: scroll;
+    text-align: center;
+}
+
+.bottom {
+    max-height: 25vh;
+    min-height: 25vh;
+}
+
+#next {
+    background-color:rgb(167, 42, 42);
+    color: white;
+}
+
+
