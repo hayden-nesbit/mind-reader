@@ -1,17 +1,19 @@
 let char = "";
 let input = "";
 function getChar() {
+    char = "";
     let char_list1 = "+©¶»%^*?&";
     let rand = Math.floor(Math.random() * char_list1.length);
     input = char_list1.charAt(rand);
     let char_list2 = "!@#$⇿∅∇∈⊠";
+    console.log(input)
     for (let i = 1; i <= 99; i++) {
         char += i + ": ";
         if (i % 9 === 0) {
             char += input;
         } else {
             char += char_list2.charAt(Math.floor(Math.random() * char_list2.length));
-        } 
+        }
         char += "<br>"
     }
 }
@@ -52,10 +54,10 @@ function update() {
             document.getElementById("next").innerHTML = "Next";
             document.getElementById("text").innerHTML = "Ex. 13 - 4 = 9. Click next to proceed";
             document.getElementById("start-reset").innerHTML = "Reset"
+            getChar();
             break;
 
         case 4:
-            getChar();
             document.getElementById("header").innerHTML = char;
             document.getElementById("next").innerHTML = "Reveal";
             document.getElementById("text").innerHTML = "Find your new number. Note the symbol beside the number";
@@ -84,9 +86,8 @@ function previousView() {
 function startReset() {
     if (view != 0) {
         view = 0;
-    } else {
-        nextView()
     }
+    nextView()
     update();
 }
 
