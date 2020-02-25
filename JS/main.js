@@ -1,22 +1,19 @@
-// let num = [];
-// function getNum() {
-//     for (let i = 1; i <= 99; i++) {
-//         num.push(i);
-//     }
-// }
-
 let char = "";
 function getChar() {
-    let char_list = "!@#$%^&*?";
-    for (let i = 0; i <= 99; i++) {
+    let char_list1 = "!@#$%^*?&";
+    let rand = Math.floor(Math.random() * 10);
+    let input = char_list1.charAt(rand);
+    let char_list2 = "+©¶»⇿∅∇∈⊠";
+    for (let i = 1; i <= 99; i++) {
+        char += i + ": ";
         if (i % 9 === 0) {
-            char += "&";
+            char += input;
         } else {
-            char += char_list.charAt(Math.floor(Math.random() * char_list.length));
-        } console.log(char)
-    } 
-} 
-
+            char += char_list2.charAt(Math.floor(Math.random() * char_list2.length));
+        } 
+        char += "<br>"
+    }
+}
 
 let view = 0;
 

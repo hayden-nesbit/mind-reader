@@ -8,18 +8,21 @@
     border-style: solid;
     border-width: 1px;
     border-color: black;
+    color: white;
     height: 75vh;
+    background-color: rgba(9, 9, 105, 0.8);
 }
 
 #header {
     overflow: scroll;
-    padding: 20px;
 }
 
 #start-reset {
     float: right;
+    
 }
 
 .container #next {
     float: center;
+    
 }
