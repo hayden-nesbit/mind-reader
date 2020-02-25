@@ -1,6 +1,7 @@
 let char = "";
 let input = "";
 function getChar() {
+    char = "";
     let char_list1 = "+©¶»%^*?&";
     let rand = Math.floor(Math.random() * char_list1.length);
     input = char_list1.charAt(rand);
