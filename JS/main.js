@@ -1,25 +1,22 @@
-let num = [];
-function getNum() {
-    for (let i = 1; i <= 99; i++) {
-        num.push(i);
-    }
-}
+// let num = [];
+// function getNum() {
+//     for (let i = 1; i <= 99; i++) {
+//         num.push(i);
+//     }
+// }
 
-let char = [];
+let char = "";
 function getChar() {
-    let possible = "!@#$%^&*?";
-    let length = 99;
+    let char_list = "!@#$%^&*?";
+    for (let i = 0; i <= 99; i++) {
+        if (i % 9 === 0) {
+            char += "&";
+        } else {
+            char += char_list.charAt(Math.floor(Math.random() * char_list.length));
+        } console.log(char)
+    } 
+} 
 
-    for (let i = 0; i <= length; i++)
-        char += possible.charAt(Math.floor(Math.random() * possible.length));
-    if (i % 9 === 0) {
-        i = "&";
-    };
-    char.push(i);
-} console.log(char)
-
-let newArray = num + " = " + char;
-console.log(newArray)
 
 let view = 0;
 
@@ -33,8 +30,7 @@ function update() {
             document.getElementById("start-reset").innerHTML = "Go";
             document.getElementById("text").style.display = "none"
             break;
-        
-        
+
         case 1:
             document.getElementById("header").innerHTML = "Pick a number from 01-99";
             document.getElementById("next").style.display = "block";
@@ -61,9 +57,8 @@ function update() {
             break;
 
         case 4:
-            getNum();
             getChar();
-            document.getElementById("header").innerHTML = newArray;
+            document.getElementById("header").innerHTML = char;
             document.getElementById("next").innerHTML = "Reveal";
             document.getElementById("text").innerHTML = "Find your new number. Note the symbol beside the number";
             document.getElementById("start-reset").innerHTML = "Reset"
@@ -89,7 +84,7 @@ function previousView() {
 }
 
 function startReset() {
-    if(view != 0) {
+    if (view != 0) {
         view = 0;
     } else {
         nextView()
