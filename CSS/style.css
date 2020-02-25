@@ -1,3 +1,6 @@
+html, main {
+    background-color: rgb(167, 42, 42);
+}
 
 
 .container {
@@ -8,21 +11,31 @@
     border-style: solid;
     border-width: 1px;
     border-color: black;
-    color: white;
+    color: black;
     height: 75vh;
-    background-color: rgba(9, 9, 105, 0.8);
-}
-
-#header {
-    overflow: scroll;
+    background-color: whitesmoke;
+    
 }
 
 #start-reset {
     float: right;
-    
 }
 
-.container #next {
-    float: center;
-    
+.top {
+    max-height: 50vh;
+    min-height: 50vh;
+    overflow: scroll;
+    text-align: center;
 }
+
+.bottom {
+    max-height: 25vh;
+    min-height: 25vh;
+}
+
+#next {
+    background-color:rgb(167, 42, 42);
+    color: white;
+}
+
+

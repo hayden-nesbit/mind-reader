@@ -1,9 +1,10 @@
 let char = "";
+let input = "";
 function getChar() {
-    let char_list1 = "!@#$%^*?&";
+    let char_list1 = "+©¶»%^*?&";
     let rand = Math.floor(Math.random() * 10);
-    let input = char_list1.charAt(rand);
-    let char_list2 = "+©¶»⇿∅∇∈⊠";
+    input = char_list1.charAt(rand);
+    let char_list2 = "!@#$⇿∅∇∈⊠";
     for (let i = 1; i <= 99; i++) {
         char += i + ": ";
         if (i % 9 === 0) {
@@ -62,9 +63,9 @@ function update() {
             break;
 
         case 5:
-            document.getElementById("header").innerHTML = "&";
+            document.getElementById("header").innerHTML = input;
             document.getElementById("next").style.display = "none";
-            document.getElementById("text").innerHTML = "Your symbol is &";
+            document.getElementById("text").innerHTML = "Your symbol is " + input;
 
     }
 
