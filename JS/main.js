@@ -21,9 +21,7 @@ function getChar() {
 let view = 0;
 
 function update() {
-
     switch (view) {
-
         case 0:
             document.getElementById("header").innerHTML = "I can read your mind";
             document.getElementById("next").style.display = "none";
