@@ -6,7 +6,7 @@ function getChar() {
     let rand = Math.floor(Math.random() * char_list1.length);
     input = char_list1.charAt(rand);
     let char_list2 = "!@#$⇿∅∇∈⊠";
-    for (let i = 1; i <= 99; i++) {
+    for (let i = 0; i <= 99; i++) {
         char += i + ": ";
         if (i % 9 === 0) {
             char += input;
